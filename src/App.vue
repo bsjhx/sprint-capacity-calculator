@@ -126,6 +126,7 @@
                 const maxAvailableHours = +this.numberOfWeeks * +this.numberOfDaysInWeek * +this.hoursPerDay * +this.numberOfEmployees;
                 const ceremoniesHours = +this.hoursForRetro + +this.hoursForPlanning + +this.hoursForDemo + +this.hoursForRefinements;
                 this.calculatedCapacity = maxAvailableHours - ceremoniesHours;
+                console.log(this.calculatedCapacity);
             }
         }
     }

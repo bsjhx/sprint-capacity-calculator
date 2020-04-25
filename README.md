@@ -17,6 +17,12 @@ Check if changes are released (it can take a moment)
 npm install
 ```
 
+## Tests
+```
+vue-cli-service test:unit
+npm run test
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
