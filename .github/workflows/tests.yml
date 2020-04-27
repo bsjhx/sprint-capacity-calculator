@@ -9,9 +9,10 @@ on:
 jobs:
   tests:
     name: run tests
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: Adzz/jest_test_action@v1.0.0
         with:
-          command: npm run test
+          package-manager: npm
+          command: run test
