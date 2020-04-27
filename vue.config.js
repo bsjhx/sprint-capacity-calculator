@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/sprint-capacity-calculator/'
+    publicPath: '/' + process.env.BASE_URL
 };
