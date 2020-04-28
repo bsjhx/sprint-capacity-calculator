@@ -19,8 +19,9 @@ jobs:
         with:
           package-manager: npm
           command: run test
-  publish:
-    name: publish
+  build-and-publish:
+    needs: tests
+    name: Build and publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,3 +31,10 @@ jobs:
           with:
             package-manager: npm
             command: run build
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: gh-pages
+          build_dir: public
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
