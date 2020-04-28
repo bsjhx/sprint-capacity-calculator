@@ -1,12 +1,10 @@
 name: Test and deploy
 
 on:
-#  push:
-#    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
-  watch:
-    types: [started]
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   tests:
