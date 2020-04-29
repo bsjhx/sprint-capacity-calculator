@@ -7,7 +7,6 @@
                     Enter your sprint main information!
                 </div>
 
-
                 <div class="columns">
                     <div class="field column is-4">
                         <label class="label" for="weeksInSprint">Numbers of weeks in sprint</label>
@@ -57,6 +56,13 @@
                             </ValidationProvider>
 
                         </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div v-for="i in +numberOfEmployees" :key="i">
+                        <p>i</p>
+                        <EmployeeAvailability/>
                     </div>
                 </div>
 
@@ -155,10 +161,13 @@
 <script>
     import {extend} from "vee-validate";
     import {min_value, required} from 'vee-validate/dist/rules';
+    import EmployeeAvailability from "./components/EmployeeAvailability";
 
     export default {
         name: 'App',
-        components: {},
+        components: {
+            EmployeeAvailability
+        },
         data: function () {
             return {
                 numberOfWeeks: 2,
